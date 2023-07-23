@@ -1,0 +1,52 @@
+#pragma once
+#include <string>
+class contact{
+private:
+	string name,address,email; 	
+	int number;	contact* next;
+public:	
+	contact();	
+	contact(string newname, string newaddress,string newemail,int newnumber);	
+	contact(string newname,string newaddress, string newemail,int newnumber, contact* nextContactPtr);	
+	void setname(string newname);	
+	void setaddress(string newaddress);	
+	void setemail(string newemail);	
+	void setnumber(int newint);	
+	void setNext(contact* nextNodePtr);    
+	contact::getname() const;    
+	contact::getaddress() const;    
+	contact::getemail() const;    
+	contact::getnumber() const;	
+	contact* contact::getNext() const;
+}; 
+contact::contact() : next(nullptr){
+} 
+contact::contact(string newname, string newaddress,string newemail,int newnumber) : name(newname),address(address),email(newemail),number(newnumber) ,next(nullptr){
+} 
+contact::contact(string newname, string newaddress,string newemail,int newnumber,contact* nextContactPtr) :	name(newname),address(address),email(newemail),number(newnumber) , next(nextContactPtr){
+} 
+void contact::setname(string newname):name(newname){
+}
+void contact::setaddress(string newaddress):address(newaddress){
+} 
+void contact::setemail(string newemail):email(newemail){
+}
+void contact::setnumber(int newnumber):number(newnumber){
+}
+void contact::setNext(contact* nextContactPtr):next(nextContactPtr){
+}  
+contact::getname() const{
+	return name;
+} 
+contact::getemail() const{    
+	return email;
+}
+contact::getaddress() const{    
+	return address;
+}
+contact::getnumber() const{    
+	return number;
+}
+contact* contact::getNext() const{	
+	return next;
+}
